@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -82,15 +82,21 @@ body {
 .hero {
     position: relative;
     height: 800px;
-    border-radius: 20px;
+    border-radius: 35px;
     background: 
-        url('/images/happy-teravel-banner-image.png') center/cover;
+        url('/images/happy-teravel-banner-image.png');
     background-position: center;
-    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero-content {
- 
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-white);
+    z-index: 1;
 }
 
 .hero h1 {
