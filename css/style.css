@@ -1,41 +1,187 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #F4EBEB;
-}
-:root{
-    --primary-color: #000000;
-    --secondary-color:#fff;
-    --third-color:#F4EBEB;
-    --myfont:"Poppins", sans-serif;
-}
-.header{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    /* keep nav centered */
-    align-items: center;
-    padding: 3rem;
-    font-family: var(--myfont);
-}
-.logo{
-    position: absolute;
-    left: 6.2rem;
-}
-.nav-list{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-   
-}
-.nav-link{
-    text-decoration: none;
-    padding: 30px;
-    color: var(--primary-color);
-}
-.hero-image{
-    display: flex;
-    place-content:center;
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-}
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f5f1eb 0%, #e8ddd4 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2c2c2c;
+        }
+
+        .nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #2c2c2c;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background-color: #2c2c2c;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 800px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 100%),
+                        url('/images/happy-teravel-banner-image.png') center/cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero-content {
+            position: absolute;
+            left: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .cta-button {
+            background: rgba(255, 255, 255, 0.95);
+            color: #2c2c2c;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        /* Social Bar */
+     
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-content {
+                left: 30px;
+                right: 30px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 0 20px;
+            }
+
+            .social-bar {
+                bottom: 20px;
+                padding: 8px 16px;
+                gap: 15px;
+            }
+
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content > * {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .hero-content h1 {
+            animation-delay: 0.2s;
+        }
+
+        .hero-content p {
+            animation-delay: 0.4s;
+        }
+
+        .cta-button {
+            animation-delay: 0.6s;
+        }
+
+        /* Decorative Elements */
+       
