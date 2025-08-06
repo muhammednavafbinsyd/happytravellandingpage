@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F4EBEB;
+}
+:root{
+    --primary-color: #000000;
+    --secondary-color:#fff;
+    --third-color:#F4EBEB;
+    --myfont:"Poppins", sans-serif;
+}
+.header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* keep nav centered */
+    align-items: center;
+    padding: 3rem;
+    font-family: var(--myfont);
+}
+.logo{
+    position: absolute;
+    left: 6.2rem;
+}
+.nav-list{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+   
+}
+.nav-link{
+    text-decoration: none;
+    padding: 30px;
+    color: var(--primary-color);
+}
+.hero-image{
+    display: flex;
+    place-content:center;
+
+}
